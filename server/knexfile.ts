@@ -1,5 +1,6 @@
 import path from 'path';
 
+// Para executar todo os padrões da pasta database
 module.exports = {
 	client: 'sqlite3',
 	connection: {

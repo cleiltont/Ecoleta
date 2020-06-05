@@ -1,14 +1,19 @@
 import { Request, Response} from 'express';
+
+// Conexão com o banco de dados
 import knex from '../database/connection';
 
 class PointsController{
 	async index(request: Request, response: Response){
+		// Querys: server para filtrar
 		const { city, uf, items } = request.query;
 
+		// Vai pegar cada item que for filtrado e retorna como inteiro
 		const parsedItems = String(items)
 		.split(',')
 		.map(item => Number(item.trim()));
 
+		// Comandos SQL
 		const points = await knex('points')
 			.join('point_items', 'points.id', '=', 'point_items.point_id')
 			.whereIn('point_items.item_id', parsedItems)
@@ -23,12 +28,15 @@ class PointsController{
 	async show(request: Request, response: Response){
 		const { id } = request.params;
 
+		// Vai retorna o id que foi solicitado
 		const point = await knex('points').where('id', id).first();
 
+		// Se ponto não existir, retorna a mensagem de erro
 		if(!point){
 			return response.status(400).json({ message: 'Point not found.' });
 		}
 
+		// Retorna apenas o titulo
 		const items = await knex('items')
 			.join('point_items', 'items.id', '=', 'point_items.item_id')
 			.where('point_items.point_id', id)
@@ -47,8 +55,9 @@ class PointsController{
 			city,
 			uf,
 			items
-		} = request.body;
+		} = request.body; // Pega o JSON requisitado
 	
+		// A proxima etapda só ira prosseguir se, a antecessor der certo
 		const trx = await knex.transaction();
 
 		const point = {
@@ -62,6 +71,7 @@ class PointsController{
 			uf,
 		};
 	
+		// Inseri na tabela pontos o JSON requisitado
 		const insertIds = await trx('points').insert(point);
 	
 		const point_id = insertIds[0];
@@ -75,6 +85,7 @@ class PointsController{
 	
 		await trx('point_items').insert(pointItems);
 
+		// Finaliza a transição
 		await trx.commit();
 	
 		return response.json({
