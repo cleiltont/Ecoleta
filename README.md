@@ -3,13 +3,13 @@
 ## Backend
 Banckend desenvolvido com Node, usando o typescript para ter mais produtividade.
 
-### Ultilizamos:
+### :pushpin: Ultilizamos:
 - **O sqlite, como banco de dados.**
 - **express: https://expressjs.com/pt-br/**
 - **knex: http://knexjs.org/**
 	Usado para conectar ao banco de dados.
 
-### Etaps:
+### :pencil: Etapas:
 - **server.ts para iniciar o servidor.**
 - **Rotas colocada no arquivo(routes.js).**
 - **Conexão com o banco de dados**
@@ -22,9 +22,9 @@ Banckend desenvolvido com Node, usando o typescript para ter mais produtividade.
 	- Adicionar um novo ponto
 - **Arquivos estático**
 
-## Tecnologias ultilizadas
+## :computer: Tecnologias ultilizadas
 - **TypeScript**
 - **Node**
 
 Uma experincia fantastica participar desse projeto.
-Um estou tendo uma otima evolução 💻😍
+Estou tendo uma otima evolução :rocket: :heart:
