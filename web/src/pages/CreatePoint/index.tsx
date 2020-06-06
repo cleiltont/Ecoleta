@@ -13,6 +13,7 @@ import logo from '../../assets/logo.svg';
 
 const CreatePoint = () => {
 
+	// Tipagem
 	interface Item{
 		id: number,
 		title: string,
@@ -27,6 +28,7 @@ const CreatePoint = () => {
 		nome: string,
 	}
 
+	// Variavel state
 	const [items, setItems] = useState<Item[]>([]);
 	const [ufs, setUfs] = useState<string[]>([]);
 	const [cities, setCities] = useState<string[]>([]);
@@ -46,6 +48,7 @@ const CreatePoint = () => {
 
 	const history = useHistory();
 
+	// Usa automaticamente se não passa uma segunda função
 	useEffect(() => {
 		navigator.geolocation.getCurrentPosition(position => {
 			const { latitude, longitude } = position.coords;
@@ -73,6 +76,7 @@ const CreatePoint = () => {
 			return;
 		}
 
+		// Busca a api do IBGE
 		axios.get<IBGECityResponse[]>(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${selectUf}/municipios`).then(response => {
 			const cityName = response.data.map(city => city.nome);
 
@@ -140,9 +144,9 @@ const CreatePoint = () => {
 
 		await api.post('points', data)
 
-		alert('Ponto de coleta criado!');
-
-		history.push('/');
+		history.push('/concluido');
+		
+		setTimeout(() => history.push('/'), 3000);
 	}
 
 	return (

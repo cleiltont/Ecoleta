@@ -2,52 +2,51 @@
 
 ![](website.gif)
 
-## Sobre
-Como estamos na semano do meio ambiente, nada melhor do que fazer uma aplição voltada a ela.
-Ecoleta é uma aplição para coleta de lixo. Você pode encontrar o ponto mais perto da suas casa para levar o seu lixo la. Ou pode cadastrar sua empresa de reciclagem.
+## About
+As we are in the semantics of the environment, nothing better than making an application focused on it.
+Ecoleta is an application for garbage collection. You can find the nearest point to your home to take your trash there. You can register your recycling company.
 
-## Backend
-Banckend desenvolvido com Node, usando o typescript para ter mais produtividade.
+## Technologies
+-	Backend: NodeJs
+-	Web: React
+-	Mobile: React Native
 
-### :pushpin: Ultilizamos:
-- **O sqlite, como banco de dados.**
-- **express:** 
-- **knex:** Usado para conectar ao banco de dados.
+## starting
+Siga todas as etapas para executar com sucesso
 
-### :pencil: Etapas:
-- **server.ts para iniciar o servidor.**
-- **Rotas colocada no arquivo(routes.js).**
-- **Conexão com o banco de dados**
-- **Criação de pontos e itens**
-- **6 itens criados por padrão**
-- **Sistema de controle**
-	- Listagem dos itens
-	- Listagem dos pontos
-	- Detalhe do ponto
-	- Adicionar um novo ponto
-- **Arquivos estático**
+### 1 Clone o repósitorio na sua maquina usando:
+	git@github.com:
 
-### :computer: Tecnologias ultilizadas
-- **TypeScript**
-- **Node**
+### 2. Verifique seu IPv4
+	- Windows: digite 'ipconfig' no terminal.
+	- Linux: digite 'hostname -I'.
+	- MacOS: Entre em "Abrir as Preferencias Rede...".
 
-## Frontend
-Frontend desenvolvido com React, tambem ultiliza typescript.
+### 3. Modifique os endereço IPv4 dos sequintes arquivos, coloque o seu. O que acabou de verfificar na etapa anterios.
+	- ecoleta/server/src/controllers/ItemsController.ts
+	- ecoleta/server/src/controllers/PointController.ts
+	- ecoleta/web/src/services/api.ts
 
-### :pushpin: Ultilizamos:
-- **leaflet**
-- **axios:** 
 
-### Etapas
-- **Criação das rotas: Pagina inicial e Cadastro de ponto.**
-- **Pagina inicial foi utilizado o 'Link' do react-router-dom, no botão cadastrar.**
-- **Api do IBGE utilizada para pegar os uf e cidades.**
-- **Mapa criado com leaflet.**
-- **Dados do cadastro enviado para o banco de dados.**
+### 4. Run backend
+Abra o cmd na pasta **server** e execute os seguintes comandos pela ordem.
+>Instalando dependencias: $ npm install
+>Iniciar migrate: $ npm run knex:migrate
+>Setar bando de dados: $ npm run knex:seed
+>Rodar o server: $ npm run dev
 
----
-Projeto em andamento...
----
+### 5. Run web
+Abra o cmd na pasta **web** e execute os seguintes comandos pela ordem.
+>Instalando dependências> $ npm install
+>Rodar aplicação: $ npm start
 
-Uma experincia fantastica participar desse projeto.
-Estou tendo uma otima evolução :rocket: :heart:
+### 6. Run mobile
+Abra o cmd na pasta **mobile** e execute os seguintes comandos pela ordem.
+>Instalando dependências> $ npm install
+Observe, você pode executar com __start__ ou __expo__.
+>Rodanpm start ou expo start
+
+
+Este projeto esta sob [licença MIT ](https://github.com/ENSE).
+
+Criado com :heart: by [Cleilton Timoteo](https://github.com/name)
