@@ -11,9 +11,8 @@ Banckend desenvolvido com Node, usando o typescript para ter mais produtividade.
 
 ### :pushpin: Ultilizamos:
 - **O sqlite, como banco de dados.**
-- **express: https://expressjs.com/pt-br/**
-- **knex: http://knexjs.org/**
-	Usado para conectar ao banco de dados.
+- **express:** 
+- **knex:** Usado para conectar ao banco de dados.
 
 ### :pencil: Etapas:
 - **server.ts para iniciar o servidor.**
@@ -28,9 +27,27 @@ Banckend desenvolvido com Node, usando o typescript para ter mais produtividade.
 	- Adicionar um novo ponto
 - **Arquivos estático**
 
-## :computer: Tecnologias ultilizadas
+### :computer: Tecnologias ultilizadas
 - **TypeScript**
 - **Node**
+
+## Frontend
+Frontend desenvolvido com React, tambem ultiliza typescript.
+
+### :pushpin: Ultilizamos:
+- **leaflet**
+- **axios:** 
+
+### Etapas
+- **Criação das rotas: Pagina inicial e Cadastro de ponto.**
+- **Pagina inicial foi utilizado o 'Link' do react-router-dom, no botão cadastrar.**
+- **Api do IBGE utilizada para pegar os uf e cidades.**
+- **Mapa criado com leaflet.**
+- **Dados do cadastro enviado para o banco de dados.**
+
+---
+Projeto em andamento...
+---
 
 Uma experincia fantastica participar desse projeto.
 Estou tendo uma otima evolução :rocket: :heart:
