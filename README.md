@@ -1,6 +1,6 @@
 # Ecoleta
 
-![](website.git)
+![](website.gif)
 
 ## Sobre
 Como estamos na semano do meio ambiente, nada melhor do que fazer uma aplição voltada a ela.
