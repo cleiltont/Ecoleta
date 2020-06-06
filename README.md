@@ -47,6 +47,9 @@ Observe, você pode executar com __start__ ou __expo__.
 >Rodanpm start ou expo start
 
 
-Este projeto esta sob [licença MIT ](https://github.com/ENSE).
+---
 
-Criado com :heart: by [Cleilton Timoteo](https://github.com/name)
+
+| Este projeto esta sob [licença MIT ](https://github.com/ENSE).
+
+|				Criado com :heart: by [Cleilton Timoteo](https://github.com/name)
