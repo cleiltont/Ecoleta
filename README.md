@@ -1,5 +1,7 @@
 # Ecoleta
 
+![](website.git)
+
 ## Sobre
 Como estamos na semano do meio ambiente, nada melhor do que fazer uma aplição voltada a ela.
 Ecoleta é uma aplição para coleta de lixo. Você pode encontrar o ponto mais perto da suas casa para levar o seu lixo la. Ou pode cadastrar sua empresa de reciclagem.
