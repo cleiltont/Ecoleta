@@ -31,19 +31,27 @@ Siga todas as etapas para executar com sucesso
 ### 4. Run backend
 Abra o cmd na pasta **server** e execute os seguintes comandos pela ordem.
 >Instalando dependencias: $ npm install
+
 >Iniciar migrate: $ npm run knex:migrate
+
 >Setar bando de dados: $ npm run knex:seed
+
 >Rodar o server: $ npm run dev
+
 
 ### 5. Run web
 Abra o cmd na pasta **web** e execute os seguintes comandos pela ordem.
 >Instalando dependências> $ npm install
+
 >Rodar aplicação: $ npm start
+
 
 ### 6. Run mobile
 Abra o cmd na pasta **mobile** e execute os seguintes comandos pela ordem.
 >Instalando dependências> $ npm install
+
 Observe, você pode executar com __start__ ou __expo__.
+
 >Rodanpm start ou expo start
 
 
