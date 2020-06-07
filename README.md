@@ -15,7 +15,7 @@ Ecoleta is an application for garbage collection. You can find the nearest point
 Siga todas as etapas para executar com sucesso
 
 ### 1 Clone o repósitorio na sua maquina usando:
-	git@github.com:
+	https://github.com/cleiltont/Ecoleta.git
 
 ### 2. Verifique seu IPv4
 	- Windows: digite 'ipconfig' no terminal.
